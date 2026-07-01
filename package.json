@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Aryan Qayum",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.75.1",
+    "@google/genai": "^2.10.0",
+    "@imagekit/nodejs": "^7.8.1",
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^1.41.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.2.0",
+    "multer-storage-cloudinary": "^4.0.0",
+    "mysql2": "^3.22.5",
+    "nodemon": "^3.1.14",
+    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^5.6.205",
+    "pdfreader": "^3.0.8"
+  }
+}
