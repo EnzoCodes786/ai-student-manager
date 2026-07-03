@@ -8,6 +8,7 @@ const userLoginRoutes = require('../src/routes/userLogin.routes')
 const uploadPfpRoutes = require('../src/routes/uploadPfp.routes')
 const uploadPdfRoutes = require('../src/routes/uploadPdf.routes')
 const chatBotRoutes = require('../src/routes/chatBot.routes')
+const createQuestionsRoutes = require('../src/routes/createQuestions.routes')
 app.use(express.json())
 app.use(cookieParser());
 app.use(cors({
@@ -23,4 +24,5 @@ app.use('/auth',userLoginRoutes);
 app.use('/auth',uploadPfpRoutes);
 app.use('/auth',uploadPdfRoutes);
 app.use('/ai',chatBotRoutes);
+app.use('/ai',createQuestionsRoutes);
 module.exports = app;
