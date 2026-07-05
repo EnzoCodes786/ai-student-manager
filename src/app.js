@@ -10,6 +10,7 @@ const uploadPdfRoutes = require('../src/routes/uploadPdf.routes')
 const chatBotRoutes = require('../src/routes/chatBot.routes')
 const createQuestionsRoutes = require('../src/routes/createQuestions.routes')
 const createQuizRoutes = require('../src/routes/createQuiz.routes')
+const sendQuizRoutes = require('../src/routes/createQuiz.routes')
 app.use(express.json())
 app.use(cookieParser());
 app.use(cors({
@@ -27,4 +28,5 @@ app.use('/auth',uploadPdfRoutes);
 app.use('/ai',chatBotRoutes);
 app.use('/ai',createQuestionsRoutes);
 app.use('/quiz',createQuizRoutes);
+app.use('/quiz',sendQuizRoutes);
 module.exports = app;
