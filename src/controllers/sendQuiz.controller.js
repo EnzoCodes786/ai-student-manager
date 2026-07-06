@@ -20,7 +20,7 @@ async function sendQuiz(req,res) {
       [topic, exam, difficulty, numQuestions]
     );
     
-    const quiz_id = await pool.query(
+    const [quiz_id] = await pool.query(
         `
         SELECT quiz_id FROM quiz_model
         WHERE user_id = (?)
@@ -30,7 +30,7 @@ async function sendQuiz(req,res) {
     res.json(
         {
             quizId:quiz_id,
-            questions:quizQuestions[0]
+            questions:quizQuestions
         }
     )
 }
