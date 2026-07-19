@@ -14,7 +14,7 @@ async function forgotPassword(req, res) {
     [otp, email],
   );
 
-  const resetToken = jwt.sign({ email }, process.env.JWT_SECRET, {
+  const resetToken = jwt.sign({ email }, process.env.TOKEN_SECRET_KEY, {
     expiresIn: "10m",
   });
 

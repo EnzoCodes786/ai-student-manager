@@ -22,7 +22,7 @@ async function verifyOtp(req,res) {
 
     await pool.query(`DELETE FROM otp_table WHERE email = ?`, [email]);
 
-    const resetPasswordToken = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: '10m' });
+    const resetPasswordToken = jwt.sign({ email }, process.env.TOKEN_SECRET_KEY, { expiresIn: '10m' });
     res.status(202).json({
         message:"Otp verified",
         resetPasswordToken
