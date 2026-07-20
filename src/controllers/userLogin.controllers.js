@@ -8,7 +8,7 @@ async function userLogin(req, res) {
   const userPass = await getUserPass(user_name);
   if (!userPass) {
     res.status(404).json({
-      message: "User Note found",
+      message: "User Not found",
     });
   } else {
     const isMatch = await bcrypt.compare(user_pass, userPass.user_pass);
